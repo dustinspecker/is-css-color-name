@@ -1,6 +1,6 @@
 'use strict';
 import babel from 'gulp-babel';
-import babelCompiler from 'babel';
+import babelCompiler from 'babel-core';
 import del from 'del';
 import gulp from 'gulp';
 import eslint from 'gulp-eslint';

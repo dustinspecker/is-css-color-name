@@ -22,5 +22,7 @@ describe('is-css-color-name', () => {
     expect(isCssColorName('green')).to.eql(true);
     expect(isCssColorName('blue')).to.eql(true);
     expect(isCssColorName('aliceblue')).to.eql(true);
+    expect(isCssColorName('ALICEBLUE')).to.eql(true);
+    expect(isCssColorName('ALICEblue')).to.eql(true);
   });
 });

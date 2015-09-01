@@ -7,5 +7,5 @@ import cssColorNames from 'css-color-names';
  * @return {Boolean} - is name a valid CSS color name?
  */
 export default function isCSSColorName(name) {
-  return !!cssColorNames[name];
+  return typeof name === 'string' ? !!cssColorNames[name.toLowerCase()] : false;
 }

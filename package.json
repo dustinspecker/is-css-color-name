@@ -22,7 +22,7 @@
     "css-color-names": "0.0.2"
   },
   "devDependencies": {
-    "babel-core": "^5.8.23",
+    "babel-core": "^6.0.1",
     "chai": "^3.0.0",
     "coveralls": "^2.11.2",
     "del": "^2.0.0",

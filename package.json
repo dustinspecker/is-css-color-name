@@ -19,7 +19,7 @@
     "lib"
   ],
   "dependencies": {
-    "css-color-names": "0.0.2"
+    "css-color-names": "0.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.0.12",

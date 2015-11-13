@@ -1,6 +1,6 @@
 {
   "name": "is-css-color-name",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Determine if a name is a valid CSS color name",
   "main": "lib/index.js",
   "scripts": {

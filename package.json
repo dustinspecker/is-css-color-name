@@ -8,7 +8,11 @@
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": "dustinspecker/is-css-color-name",
-  "keywords": [],
+  "keywords": [
+    "css",
+    "color",
+    "name"
+  ],
   "author": {
     "name": "Dustin Specker",
     "email": "DustinSpecker@DustinSpecker.com",

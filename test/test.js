@@ -1,28 +1,25 @@
-/* global describe, it */
 'use strict'
 import isCssColorName from '../lib/'
-import {expect} from 'chai'
+import test from 'ava'
 
-describe('is-css-color-name', () => {
-  it('should return false for non-strings', () => {
-    expect(isCssColorName()).to.eql(false)
-    expect(isCssColorName(1)).to.eql(false)
-    expect(isCssColorName([])).to.eql(false)
-    expect(isCssColorName(null)).to.eql(false)
-    expect(isCssColorName(undefined)).to.eql(false)
-    expect(isCssColorName({})).to.eql(false)
-  })
+test('should return false for non-strings', t => {
+  t.notOk(isCssColorName())
+  t.notOk(isCssColorName(1))
+  t.notOk(isCssColorName([]))
+  t.notOk(isCssColorName(null))
+  t.notOk(isCssColorName(undefined))
+  t.notOk(isCssColorName({}))
+})
 
-  it('should return false for non-valid CSS color names', () => {
-    expect(isCssColorName('unicorn')).to.eql(false)
-    expect(isCssColorName('dinosaur')).to.eql(false)
-  })
+test('should return false for non-valid CSS color names', t => {
+  t.notOk(isCssColorName('unicorn'))
+  t.notOk(isCssColorName('dinosaur'))
+})
 
-  it('should return true for valid CSS color names', () => {
-    expect(isCssColorName('green')).to.eql(true)
-    expect(isCssColorName('blue')).to.eql(true)
-    expect(isCssColorName('aliceblue')).to.eql(true)
-    expect(isCssColorName('ALICEBLUE')).to.eql(true)
-    expect(isCssColorName('ALICEblue')).to.eql(true)
-  })
+test('should return true for valid CSS color names', t => {
+  t.ok(isCssColorName('green'))
+  t.ok(isCssColorName('blue'))
+  t.ok(isCssColorName('aliceblue'))
+  t.ok(isCssColorName('ALICEBLUE'))
+  t.ok(isCssColorName('ALICEblue'))
 })

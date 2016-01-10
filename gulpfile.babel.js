@@ -1,11 +1,8 @@
 'use strict'
 import babel from 'gulp-babel'
-import babelCompiler from 'babel-core'
 import del from 'del'
 import gulp from 'gulp'
 import eslint from 'gulp-eslint'
-import istanbul from 'gulp-istanbul'
-import mocha from 'gulp-mocha'
 
 const configFiles = './gulpfile.babel.js'
   , srcFiles = 'src/*.js'
@@ -29,19 +26,3 @@ gulp.task('compile', ['lint'], () =>
 )
 
 gulp.task('build', ['compile'])
-
-gulp.task('test', ['build'], cb => {
-  gulp.src([`${destDir}*.js`])
-    .pipe(istanbul())
-    .pipe(istanbul.hookRequire())
-    .on('finish', () => {
-      gulp.src([testFiles])
-        .pipe(mocha({
-          compilers: {
-            js: babelCompiler
-          }
-        }))
-        .pipe(istanbul.writeReports())
-        .on('end', cb)
-    })
-})

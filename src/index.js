@@ -1,5 +1,5 @@
-'use strict';
-import cssColorNames from 'css-color-names';
+'use strict'
+import cssColorNames from 'css-color-names'
 
 /**
  * Determine if name is a valid CSS color name
@@ -7,5 +7,5 @@ import cssColorNames from 'css-color-names';
  * @return {Boolean} - is name a valid CSS color name?
  */
 module.exports = function (name) {
-  return typeof name === 'string' ? !!cssColorNames[name.toLowerCase()] : false;
-};
+  return typeof name === 'string' ? !!cssColorNames[name.toLowerCase()] : false
+}

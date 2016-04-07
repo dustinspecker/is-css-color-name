@@ -3,23 +3,23 @@ import isCssColorName from '../lib/'
 import test from 'ava'
 
 test('should return false for non-strings', t => {
-  t.notOk(isCssColorName())
-  t.notOk(isCssColorName(1))
-  t.notOk(isCssColorName([]))
-  t.notOk(isCssColorName(null))
-  t.notOk(isCssColorName(undefined))
-  t.notOk(isCssColorName({}))
+  t.falsy(isCssColorName())
+  t.falsy(isCssColorName(1))
+  t.falsy(isCssColorName([]))
+  t.falsy(isCssColorName(null))
+  t.falsy(isCssColorName(undefined))
+  t.falsy(isCssColorName({}))
 })
 
 test('should return false for non-valid CSS color names', t => {
-  t.notOk(isCssColorName('unicorn'))
-  t.notOk(isCssColorName('dinosaur'))
+  t.falsy(isCssColorName('unicorn'))
+  t.falsy(isCssColorName('dinosaur'))
 })
 
 test('should return true for valid CSS color names', t => {
-  t.ok(isCssColorName('green'))
-  t.ok(isCssColorName('blue'))
-  t.ok(isCssColorName('aliceblue'))
-  t.ok(isCssColorName('ALICEBLUE'))
-  t.ok(isCssColorName('ALICEblue'))
+  t.truthy(isCssColorName('green'))
+  t.truthy(isCssColorName('blue'))
+  t.truthy(isCssColorName('aliceblue'))
+  t.truthy(isCssColorName('ALICEBLUE'))
+  t.truthy(isCssColorName('ALICEblue'))
 })

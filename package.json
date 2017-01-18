@@ -38,7 +38,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.0.0",
     "gulp-eslint": "^3.0.1",
-    "nyc": "^8.4.0"
+    "nyc": "^10.1.2"
   },
   "nyc": {
     "exclude": [
